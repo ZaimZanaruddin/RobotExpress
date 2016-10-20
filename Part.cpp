@@ -37,3 +37,7 @@ string Part::getDescription()
     return p_description;
 }
 
+int Part::number_of_parts()
+{
+    return num_parts;
+}

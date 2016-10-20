@@ -12,10 +12,7 @@
 #include "string" 
 #include <vector>
 #include "Part.h"
-#include "head.h"
-#include "battery.h"
-#include "arm.h"
-#include "locomotor.h"
+
 
 
 class Torso: public Part {
@@ -33,10 +30,6 @@ class Torso: public Part {
     
     
     int getBatteries();
-    void addlocomotor(locomotor locomotor);
-    void addBattery(battery battery);
-    void addArm(arm arm);
-    void addHead(head head);
     
     
     
@@ -45,8 +38,7 @@ class Torso: public Part {
 private:
     
     int numOfBatteries;
-    int numOfArms;
-    
+
     
 };
 

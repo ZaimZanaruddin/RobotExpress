@@ -16,9 +16,9 @@ class head : public Part {
     
     
 public:
-    head(string h_name, int h_partUPC, double h_cost, double h_weight, string h_description)
-    : Part(name, partUPC, weight cost descrption) {}
+    head(string name, int partUPC, double cost, double weight, string h_description, ComponentType type)
+    : Part(name, partUPC, weight, cost, description, ComponentType) {}
 
     
-}
+};
 #endif /* Head_h */

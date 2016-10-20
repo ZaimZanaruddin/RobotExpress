@@ -9,23 +9,30 @@
 #ifndef Part_h
 #define Part_h
 
+#include <iostream>
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 
+
+enum class ComponentType{head, arm, locomotor, torso, battery};
+
 class Part{
      public:
-            Part(string p_name,
-                 int p_partUPC,
-                 double p_cost,
-                 double p_weight,
-                 string p_description):
+            Part(string name,
+                 int partUPC,
+                 double cost,
+                 double weight,
+                 string description,
+                 ComponentType type):
     
-                 p_name(name),
-                 p_partUPC(partUPC),
-                 p_cost(cost),
-                 p_weight(weight),
-                 p_description(description) {}
+                 name(name),
+                 partUPC(partUPC),
+                 cost(cost),
+                 weight(weight),
+                 description(description),
+                 componentType(type) {}
     
     
     
@@ -37,12 +44,13 @@ class Part{
     string getDescription();
     
     
-private:
+protected:
     string name;
     int partUPC;
     double cost;
     double weight;
     string description;
+    ComponentType type;
     
 };
 

@@ -7,3 +7,9 @@
 //
 
 #include <stdio.h>
+#include "locomotor.h"
+
+int locomotor::powerConsumed()
+{
+    return maxSpeed;
+}

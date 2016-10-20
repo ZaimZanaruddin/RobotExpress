@@ -17,12 +17,14 @@ class locomotor : public Part {
     
 
 public:
-    locomotor(string l_name, int l_partUPC, double l_cost, double l_weight, string l_description, int l_maxSpeed)
-    : Part(name, partUPC, weight cost descrption), maxSpeed(maxSpeed){}
+    locomotor(string name, int partUPC, double cost, double weight, string description, int maxSpeed)
+    : Part(name, partUPC, weight, cost, description, type), maxSpeed(maxSpeed){}
+    
+    int powerConsumed();
 
 
 private:
-    int maxspeed
+    int maxspeed;
     
 
 };
